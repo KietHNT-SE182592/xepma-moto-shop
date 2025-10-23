@@ -1,14 +1,24 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Menu, Search, ShoppingCart, X } from "lucide-react";
+import { Menu, Search, ShoppingCart, X, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { useCart } from "@/contexts/CartContext";
+import { useAuth } from "@/contexts/AuthContext";
 import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
+  const { items, totalItems } = useCart();
+  const { user } = useAuth();
 
   const navLinks = [
     { name: "Trang chủ", path: "/" },
@@ -58,13 +68,78 @@ const Header = () => {
             </div>
           </form>
 
-          {/* Cart */}
-          <Button variant="outline" size="icon" className="relative">
-            <ShoppingCart className="h-5 w-5" />
-            <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center">
-              0
-            </span>
-          </Button>
+          {/* User Menu */}
+          <div className="flex items-center space-x-2">
+            {user ? (
+              <Button variant="outline" size="icon" asChild>
+                <Link to="/profile">
+                  <User className="h-5 w-5" />
+                </Link>
+              </Button>
+            ) : (
+              <Button variant="outline" size="sm" asChild className="hidden md:flex">
+                <Link to="/auth">Đăng nhập</Link>
+              </Button>
+            )}
+
+            {/* Cart with Preview */}
+            <Popover>
+              <PopoverTrigger asChild>
+                <Button variant="outline" size="icon" className="relative">
+                  <ShoppingCart className="h-5 w-5" />
+                  {totalItems > 0 && (
+                    <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                      {totalItems}
+                    </span>
+                  )}
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-80" align="end">
+                <div className="space-y-4">
+                  <h3 className="font-semibold">Giỏ hàng của bạn</h3>
+                  {items.length === 0 ? (
+                    <p className="text-sm text-muted-foreground py-4 text-center">
+                      Giỏ hàng trống
+                    </p>
+                  ) : (
+                    <>
+                      <div className="space-y-2 max-h-[300px] overflow-y-auto">
+                        {items.slice(0, 3).map((item) => (
+                          <Card key={item.id}>
+                            <CardContent className="p-3">
+                              <div className="flex gap-3">
+                                <img 
+                                  src={item.image} 
+                                  alt={item.name}
+                                  className="w-12 h-12 object-cover rounded"
+                                />
+                                <div className="flex-1 min-w-0">
+                                  <p className="text-sm font-medium truncate">{item.name}</p>
+                                  <p className="text-sm text-muted-foreground">
+                                    {item.quantity} × {item.price.toLocaleString("vi-VN")}đ
+                                  </p>
+                                </div>
+                              </div>
+                            </CardContent>
+                          </Card>
+                        ))}
+                        {items.length > 3 && (
+                          <p className="text-sm text-muted-foreground text-center">
+                            ...và {items.length - 3} sản phẩm khác
+                          </p>
+                        )}
+                      </div>
+                      <div className="space-y-2 pt-2 border-t">
+                        <Button className="w-full" asChild>
+                          <Link to="/cart">Xem giỏ hàng</Link>
+                        </Button>
+                      </div>
+                    </>
+                  )}
+                </div>
+              </PopoverContent>
+            </Popover>
+          </div>
 
           {/* Mobile menu button */}
           <Button

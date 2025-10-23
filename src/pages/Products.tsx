@@ -31,18 +31,18 @@ const Products = () => {
 
   // Mock data - có thể thay thế bằng API
   const allProducts = [
-    { name: "Phanh đĩa trước Honda Winner X", price: 450000, originalPrice: 550000, image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=500", category: "honda", isNew: false, isSale: true },
-    { name: "Nhớt Motul 7100 4T 10W40", price: 280000, image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500", category: "oil", isNew: true, isSale: false },
-    { name: "Lọc gió K&N Yamaha Exciter", price: 350000, originalPrice: 420000, image: "https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?w=500", category: "yamaha", isNew: false, isSale: true },
-    { name: "Bộ piston Racing Boy Suzuki Raider", price: 680000, image: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=500", category: "suzuki", isNew: true, isSale: false },
-    { name: "Dây curoa SYM Symphony", price: 220000, image: "https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=500", category: "sym", isNew: false, isSale: false },
-    { name: "Bình xăng con Honda Vision", price: 850000, originalPrice: 1000000, image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=500", category: "honda", isNew: false, isSale: true },
-    { name: "Yên xe Givi Honda SH Mode", price: 1200000, image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500", category: "accessories", isNew: true, isSale: false },
-    { name: "Phuộc YSS Yamaha NVX", price: 3200000, image: "https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?w=500", category: "yamaha", isNew: true, isSale: false },
-    { name: "Má phanh sau Suzuki Satria", price: 180000, image: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=500", category: "suzuki", isNew: false, isSale: false },
-    { name: "Đèn pha LED SYM Galaxy", price: 650000, originalPrice: 800000, image: "https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=500", category: "sym", isNew: false, isSale: true },
-    { name: "Nhớt Shell Advance Ultra", price: 320000, image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500", category: "oil", isNew: false, isSale: false },
-    { name: "Kính chiếu hậu Rizoma", price: 450000, image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=500", category: "accessories", isNew: true, isSale: false },
+    { id: "1", name: "Phanh đĩa trước Honda Winner X", price: 450000, originalPrice: 550000, image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=500", category: "honda", isNew: false, isSale: true },
+    { id: "2", name: "Nhớt Motul 7100 4T 10W40", price: 280000, image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500", category: "oil", isNew: true, isSale: false },
+    { id: "3", name: "Lọc gió K&N Yamaha Exciter", price: 350000, originalPrice: 420000, image: "https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?w=500", category: "yamaha", isNew: false, isSale: true },
+    { id: "4", name: "Bộ piston Racing Boy Suzuki Raider", price: 680000, image: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=500", category: "suzuki", isNew: true, isSale: false },
+    { id: "5", name: "Dây curoa SYM Symphony", price: 220000, image: "https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=500", category: "sym", isNew: false, isSale: false },
+    { id: "6", name: "Bình xăng con Honda Vision", price: 850000, originalPrice: 1000000, image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=500", category: "honda", isNew: false, isSale: true },
+    { id: "7", name: "Yên xe Givi Honda SH Mode", price: 1200000, image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500", category: "accessories", isNew: true, isSale: false },
+    { id: "8", name: "Phuộc YSS Yamaha NVX", price: 3200000, image: "https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?w=500", category: "yamaha", isNew: true, isSale: false },
+    { id: "9", name: "Má phanh sau Suzuki Satria", price: 180000, image: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=500", category: "suzuki", isNew: false, isSale: false },
+    { id: "10", name: "Đèn pha LED SYM Galaxy", price: 650000, originalPrice: 800000, image: "https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=500", category: "sym", isNew: false, isSale: true },
+    { id: "11", name: "Nhớt Shell Advance Ultra", price: 320000, image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500", category: "oil", isNew: false, isSale: false },
+    { id: "12", name: "Kính chiếu hậu Rizoma", price: 450000, image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=500", category: "accessories", isNew: true, isSale: false },
   ];
 
   const filteredProducts = selectedCategory === "all" 
