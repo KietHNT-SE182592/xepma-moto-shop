@@ -39,7 +39,7 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-start space-x-2">
                 <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span>131/14 Tân Hương, Phường Tân Quý, Quận Tân Phú, TP. Hồ Chí Minh</span>
+                <span>179/58/10 Lê Đình Thám, phường Tân Sơn Nhì, quận Tân Phú, TP. Hồ Chí Minh</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-5 w-5 text-primary shrink-0" />

@@ -61,8 +61,8 @@ const Contact = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm">
-                      131/14 Tân Hương, Phường Tân Quý,<br />
-                      Quận Tân Phú, TP. Hồ Chí Minh
+                      179/58/10 Lê Đình Thám, phường Tân Sơn Nhì,<br />
+                      quận Tân Phú, TP. Hồ Chí Minh
                     </p>
                   </CardContent>
                 </Card>

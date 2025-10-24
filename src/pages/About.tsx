@@ -62,7 +62,7 @@ const About = () => {
                   <ul className="space-y-2">
                     <li><strong>Tên công ty:</strong> CÔNG TY TNHH XE PHÁO MÃ</li>
                     <li><strong>Mã số thuế:</strong> 0319004288</li>
-                    <li><strong>Địa chỉ:</strong> 131/14 Tân Hương, Phường Tân Quý, Quận Tân Phú, TP. Hồ Chí Minh</li>
+                    <li><strong>Địa chỉ:</strong> 179/58/10 Lê Đình Thám, phường Tân Sơn Nhì, quận Tân Phú, TP. Hồ Chí Minh</li>
                     <li><strong>Email:</strong> lengochoaithanh130597@gmail.com</li>
                   </ul>
                 </div>
