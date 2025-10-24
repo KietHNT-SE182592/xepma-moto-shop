@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/popover";
 import { useCart } from "@/contexts/CartContext";
 import { useAuth } from "@/contexts/AuthContext";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.svg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
