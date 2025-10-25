@@ -8,77 +8,77 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 38%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
 
-    --card: 0 0% 32%;
+    --card: 0 0% 38%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 32%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
 
-    /* Màu vàng gold gradient cho ngành xe máy */
-    --primary: 42 59% 41%;
+    /* Màu vàng gold sáng và tươi */
+    --primary: 45 85% 58%;
     --primary-foreground: 0 0% 10%;
 
     /* Màu xám đậm cho secondary */
-    --secondary: 0 0% 28%;
+    --secondary: 0 0% 38%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 45%;
-    --muted-foreground: 0 0% 75%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
     /* Accent màu vàng gold sáng */
-    --accent: 45 88% 78%;
+    --accent: 45 90% 65%;
     --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 50%;
-    --input: 0 0% 28%;
-    --ring: 42 59% 41%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 45 85% 58%;
 
     --radius: 0.5rem;
 
-    /* Gradients - Gold gradient */
-    --gradient-hero: linear-gradient(135deg, #a27b2c 0%, #fdea92 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 32%) 0%, hsl(0 0% 28%) 100%);
-    --gradient-gold: linear-gradient(135deg, #a27b2c 0%, #fdea92 100%);
+    /* Gradients - Bright Gold gradient */
+    --gradient-hero: linear-gradient(135deg, #d4af37 0%, #f4e4a6 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 38%) 0%, hsl(0 0% 35%) 100%);
+    --gradient-gold: linear-gradient(135deg, #d4af37 0%, #f4e4a6 100%);
     
     /* Shadows */
-    --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
-    --shadow-hover: 0 10px 15px -3px hsl(42 59% 41% / 0.3), 0 4px 6px -2px hsl(42 59% 41% / 0.2);
+    --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.06);
+    --shadow-hover: 0 10px 15px -3px hsl(45 85% 58% / 0.3), 0 4px 6px -2px hsl(45 85% 58% / 0.2);
   }
 
   .dark {
-    --background: 0 0% 20%;
+    --background: 0 0% 10%;
     --foreground: 0 0% 98%;
 
-    --card: 0 0% 25%;
+    --card: 0 0% 38%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 25%;
+    --popover: 0 0% 15%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 42 59% 41%;
+    --primary: 45 85% 58%;
     --primary-foreground: 0 0% 10%;
 
-    --secondary: 0 0% 30%;
+    --secondary: 0 0% 38%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 35%;
-    --muted-foreground: 0 0% 75%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 45 88% 78%;
+    --accent: 45 90% 65%;
     --accent-foreground: 0 0% 10%;
 
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 40%;
-    --input: 0 0% 30%;
-    --ring: 42 59% 41%;
+    --border: 0 0% 25%;
+    --input: 0 0% 20%;
+    --ring: 45 85% 58%;
   }
 }
 
