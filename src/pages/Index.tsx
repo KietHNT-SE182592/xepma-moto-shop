@@ -140,34 +140,35 @@ const Index = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-[500px] md:h-[600px] overflow-hidden">
-        <img
-          src={heroBanner}
-          alt="XE PHÁO MÃ"
-          className="w-full h-full object-cover"
+      <section className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url(${heroBanner})`,
+          }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 to-secondary/50" />
+        <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex items-center">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl text-secondary-foreground">
-              <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 leading-tight">
                 Phụ Tùng Xe Máy <span className="text-primary">Chính Hãng</span>
               </h1>
-              <p className="text-lg md:text-xl mb-8">
+              <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8">
                 Cam kết uy tín, chất lượng và giao hàng nhanh chóng toàn quốc
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link to="/products">
-                  <Button size="lg" className="text-lg">
+                  <Button size="lg" className="w-full sm:w-auto text-base sm:text-lg">
                     Xem sản phẩm
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                   </Button>
                 </Link>
                 <Link to="/contact">
                   <Button
                     size="lg"
                     variant="outline"
-                    className="text-lg bg-background/10 hover:bg-background/20 border-background/30"
+                    className="w-full sm:w-auto text-base sm:text-lg bg-background/10 hover:bg-background/20 border-background/30"
                   >
                     Liên hệ ngay
                   </Button>
@@ -179,28 +180,28 @@ const Index = () => {
       </section>
 
       {/* Features */}
-      <section className="relative bg-primary mt-3 py-10">
-        {/* Black angled corner right */}
-        <div className="absolute top-1/2 right-0 -translate-y-1/2 h-[120%] w-40 bg-black clip-path-right" />
+      <section className="relative bg-primary mt-3 py-8 sm:py-10">
+        {/* Black angled corner right - hidden on mobile */}
+        <div className="hidden lg:block absolute top-1/2 right-0 -translate-y-1/2 h-[120%] w-40 bg-black clip-path-right" />
 
-        {/* Bottom angle stripe */}
-        <div className="absolute bottom-0 left-0 w-[55%] h-6 bg-black clip-path-bottom" />
+        {/* Bottom angle stripe - hidden on mobile */}
+        <div className="hidden lg:block absolute bottom-0 left-0 w-[55%] h-6 bg-black clip-path-bottom" />
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="flex items-center gap-3 bg-white rounded-md p-4 shadow-sm"
+                className="flex items-center gap-3 bg-white rounded-md p-3 sm:p-4 shadow-sm"
               >
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                  <feature.icon className="h-6 w-6 text-primary" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <feature.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                 </div>
-                <div>
-                  <h3 className="font-bold text-black">
+                <div className="min-w-0">
+                  <h3 className="font-bold text-black text-sm sm:text-base">
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-black">
+                  <p className="text-xs sm:text-sm text-black">
                     {feature.desc}
                   </p>
                 </div>
@@ -211,34 +212,34 @@ const Index = () => {
       </section>
 
       {/* Categories */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="mb-12 text-left">
+      <section className="py-12 sm:py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-8 sm:mb-12 text-left">
             {/* Title */}
             <div className="relative w-fit block">
-              {/* Background yellow */}
-              <div className="absolute inset-0 bg-primary clip-subtitle h-10 top-2 right-[-90px] w-[calc(100%+90px)]" />
+              {/* Background yellow - responsive */}
+              <div className="absolute inset-0 bg-primary clip-subtitle h-8 sm:h-10 top-1 sm:top-2 right-[-60px] sm:right-[-90px] w-[calc(100%+60px)] sm:w-[calc(100%+90px)]" />
 
-              {/* Slanted stripes */}
-              <div className="absolute top-2 right-[-126px] flex gap-3">
+              {/* Slanted stripes - hidden on mobile */}
+              <div className="hidden sm:flex absolute top-2 right-[-126px] gap-3">
                 <div className="w-3 h-10 bg-primary skew-x-[-30deg] clip-subtitle" />
                 <div className="w-3 h-10 bg-primary skew-x-[-30deg] clip-subtitle" />
               </div>
 
-              <h2 className="relative text-3xl md:text-4xl font-bold text-black px-4 py-1 z-10">
+              <h2 className="relative text-2xl sm:text-3xl md:text-4xl font-bold text-black px-3 sm:px-4 py-1 z-10">
                 Danh Mục Sản Phẩm
               </h2>
             </div>
 
             {/* Subtitle */}
-            <div className="relative w-fit block ">
-              <p className="relative text-white text-xs md:text-md px-3 pr-12 py-0.5 z-10 bg-black clip-subtitle">
+            <div className="relative w-fit block mt-2">
+              <p className="relative text-white text-xs sm:text-sm md:text-base px-2 sm:px-3 pr-8 sm:pr-12 py-0.5 z-10 bg-black clip-subtitle">
                 Phụ tùng chính hãng cho mọi hãng xe
               </p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {categories.map((category, index) => (
               <CategoryCard key={index} {...category} />
             ))}
@@ -247,25 +248,25 @@ const Index = () => {
       </section>
 
       {/* Featured Products */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center mb-12">
+      <section className="py-12 sm:py-16 bg-muted">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 sm:mb-12 gap-4">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">
                 Sản Phẩm Nổi Bật
               </h2>
-              <p className="text-muted-foreground text-lg">
+              <p className="text-muted-foreground text-base sm:text-lg">
                 Được khách hàng tin dùng nhất
               </p>
             </div>
             <Link to="/products">
-              <Button variant="outline">
+              <Button variant="outline" className="w-full sm:w-auto">
                 Xem tất cả
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {featuredProducts.map((product, index) => (
               <ProductCard key={index} {...product} />
             ))}
@@ -274,18 +275,18 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-accent text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <section className="py-16 sm:py-20 bg-gradient-to-r from-primary to-accent text-primary-foreground">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
             Bạn cần tư vấn phụ tùng xe máy?
           </h2>
-          <p className="text-lg mb-8 opacity-90">
+          <p className="text-base sm:text-lg mb-6 sm:mb-8 opacity-90 max-w-2xl mx-auto">
             Đội ngũ chuyên gia của chúng tôi sẵn sàng hỗ trợ bạn 24/7
           </p>
           <Link to="/contact">
-            <Button size="lg" variant="secondary" className="text-lg">
+            <Button size="lg" variant="secondary" className="text-base sm:text-lg">
               Liên hệ ngay
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Button>
           </Link>
         </div>

@@ -55,38 +55,42 @@ const Products = () => {
       
       <main className="flex-1">
         {/* Page Header */}
-        <section className="py-12 bg-gradient-to-r from-primary to-accent text-primary-foreground">
+        <section className="py-6 sm:py-8 md:py-12 bg-gradient-to-r from-primary to-accent text-primary-foreground">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-4">Sản Phẩm</h1>
-            <p className="text-lg opacity-90">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">Sản Phẩm</h1>
+            <p className="text-sm sm:text-base md:text-lg opacity-90">
               Phụ tùng xe máy chính hãng với hơn {allProducts.length} sản phẩm
             </p>
           </div>
         </section>
 
         {/* Filters */}
-        <section className="py-8 border-b">
+        <section className="py-4 sm:py-6 md:py-8 border-b">
           <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row gap-4 items-start md:items-center justify-between">
+            <div className="flex flex-col gap-4 items-start">
               {/* Category filter */}
-              <div className="flex flex-wrap gap-2">
-                {categories.map((cat) => (
-                  <Button
-                    key={cat.value}
-                    variant={selectedCategory === cat.value ? "default" : "outline"}
-                    onClick={() => setSelectedCategory(cat.value)}
-                    size="sm"
-                  >
-                    {cat.label}
-                  </Button>
-                ))}
+              <div className="w-full">
+                <h3 className="text-sm font-medium mb-2 text-muted-foreground">Danh mục:</h3>
+                <div className="flex flex-wrap gap-1 sm:gap-2">
+                  {categories.map((cat) => (
+                    <Button
+                      key={cat.value}
+                      variant={selectedCategory === cat.value ? "default" : "outline"}
+                      onClick={() => setSelectedCategory(cat.value)}
+                      size="sm"
+                      className="text-xs sm:text-sm px-2 sm:px-3 py-1 sm:py-2 h-auto"
+                    >
+                      {cat.label}
+                    </Button>
+                  ))}
+                </div>
               </div>
 
               {/* Sort */}
-              <div className="flex items-center space-x-2">
-                <span className="text-sm text-muted-foreground">Sắp xếp:</span>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 w-full sm:w-auto">
+                <span className="text-sm text-muted-foreground whitespace-nowrap">Sắp xếp:</span>
                 <Select value={sortBy} onValueChange={setSortBy}>
-                  <SelectTrigger className="w-[180px]">
+                  <SelectTrigger className="w-full sm:w-[180px]">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
@@ -102,14 +106,14 @@ const Products = () => {
         </section>
 
         {/* Products Grid */}
-        <section className="py-12">
+        <section className="py-6 sm:py-8 md:py-12">
           <div className="container mx-auto px-4">
-            <div className="mb-6">
-              <p className="text-muted-foreground">
+            <div className="mb-4 sm:mb-6">
+              <p className="text-sm sm:text-base text-muted-foreground">
                 Hiển thị {filteredProducts.length} sản phẩm
               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
               {filteredProducts.map((product, index) => (
                 <ProductCard key={index} {...product} />
               ))}

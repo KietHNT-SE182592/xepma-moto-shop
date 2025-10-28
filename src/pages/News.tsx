@@ -63,19 +63,19 @@ const News = () => {
       
       <main className="flex-1">
         {/* Page Header */}
-        <section className="py-12 bg-gradient-to-r from-primary to-accent text-primary-foreground">
+        <section className="py-6 sm:py-8 md:py-12 bg-gradient-to-r from-primary to-accent text-primary-foreground">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-4">Tin Tức & Mẹo Hay</h1>
-            <p className="text-lg opacity-90">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">Tin Tức & Mẹo Hay</h1>
+            <p className="text-sm sm:text-base md:text-lg opacity-90">
               Cập nhật kiến thức bảo dưỡng và chăm sóc xe máy
             </p>
           </div>
         </section>
 
         {/* News Grid */}
-        <section className="py-12">
+        <section className="py-6 sm:py-8 md:py-12">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {newsArticles.map((article, index) => (
                 <Card key={index} className="group overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer">
                   <div className="relative aspect-video overflow-hidden">
@@ -84,25 +84,25 @@ const News = () => {
                       alt={article.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
-                    <Badge className="absolute top-3 left-3 bg-primary">
+                    <Badge className="absolute top-2 sm:top-3 left-2 sm:left-3 bg-primary text-xs">
                       {article.category}
                     </Badge>
                   </div>
-                  <CardContent className="p-5">
-                    <h3 className="text-xl font-bold mb-3 line-clamp-2 group-hover:text-primary transition-colors">
+                  <CardContent className="p-3 sm:p-4 md:p-5">
+                    <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2 sm:mb-3 line-clamp-2 group-hover:text-primary transition-colors">
                       {article.title}
                     </h3>
-                    <p className="text-white text-sm mb-4 line-clamp-3">
+                    <p className="text-white text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-2 sm:line-clamp-3">
                       {article.excerpt}
                     </p>
                     <div className="flex items-center justify-between text-xs text-white">
                       <div className="flex items-center space-x-1">
                         <Calendar className="h-3 w-3" />
-                        <span>{article.date}</span>
+                        <span className="text-xs">{article.date}</span>
                       </div>
                       <div className="flex items-center space-x-1">
                         <User className="h-3 w-3" />
-                        <span>{article.author}</span>
+                        <span className="text-xs">{article.author}</span>
                       </div>
                     </div>
                   </CardContent>
@@ -113,10 +113,10 @@ const News = () => {
         </section>
 
         {/* Newsletter CTA */}
-        <section className="py-16 bg-muted">
+        <section className="py-8 sm:py-12 md:py-16 bg-muted">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Đăng ký nhận tin mới nhất</h2>
-            <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4">Đăng ký nhận tin mới nhất</h2>
+            <p className="text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto text-sm sm:text-base">
               Nhận thông tin về khuyến mãi, mẹo bảo dưỡng xe và tin tức mới nhất 
               từ XE PHÁO MÃ
             </p>
