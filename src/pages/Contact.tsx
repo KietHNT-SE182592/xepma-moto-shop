@@ -186,7 +186,7 @@ const Contact = () => {
             Vị trí cửa hàng
           </h2>
           <div className="w-full">
-            <div className="aspect-video w-full max-w-full mx-auto rounded-lg overflow-hidden shadow-lg">
+            <div className="aspect-video w-full max-w-full mx-auto rounded-lg overflow-hidden shadow-lg border-4 border-gray-400">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1264891957537!2d106.62502631531352!3d10.804766161690887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752813b0fe6d6b%3A0x8c02a9e8e7b8c2f0!2zVMOibiBIxrDGoW5nLCBUw6JuIFF1w70sIFTDom4gUGjDuiwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1642425676543!5m2!1svi!2s"
                 width="100%"

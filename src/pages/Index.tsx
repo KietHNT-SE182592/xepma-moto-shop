@@ -197,10 +197,10 @@ const Index = () => {
                   <feature.icon className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-card-foreground">
+                  <h3 className="font-bold text-black">
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-black">
                     {feature.desc}
                   </p>
                 </div>

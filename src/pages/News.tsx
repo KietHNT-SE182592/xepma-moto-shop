@@ -92,10 +92,10 @@ const News = () => {
                     <h3 className="text-xl font-bold mb-3 line-clamp-2 group-hover:text-primary transition-colors">
                       {article.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
+                    <p className="text-white text-sm mb-4 line-clamp-3">
                       {article.excerpt}
                     </p>
-                    <div className="flex items-center justify-between text-xs text-muted-foreground">
+                    <div className="flex items-center justify-between text-xs text-white">
                       <div className="flex items-center space-x-1">
                         <Calendar className="h-3 w-3" />
                         <span>{article.date}</span>
