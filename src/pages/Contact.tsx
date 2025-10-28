@@ -24,7 +24,9 @@ const Contact = () => {
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -34,7 +36,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      
+
       <main className="flex-1">
         {/* Page Header */}
         <section className="py-12 bg-gradient-to-r from-primary to-accent text-primary-foreground">
@@ -61,7 +63,8 @@ const Contact = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm">
-                      179/58/10 Lê Đình Thám, phường Tân Sơn Nhì,<br />
+                      179/58/10 Lê Đình Thám, phường Tân Sơn Nhì,
+                      <br />
                       quận Tân Phú, TP. Hồ Chí Minh
                     </p>
                   </CardContent>
@@ -75,7 +78,7 @@ const Contact = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <a 
+                    <a
                       href="mailto:lengochoaithanh130597@gmail.com"
                       className="text-sm hover:text-primary transition-colors"
                     >
@@ -93,7 +96,8 @@ const Contact = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm">
-                      Thứ 2 - Thứ 7: 8:00 - 18:00<br />
+                      Thứ 2 - Thứ 7: 8:00 - 18:00
+                      <br />
                       Chủ nhật: 8:00 - 12:00
                     </p>
                   </CardContent>
@@ -162,7 +166,11 @@ const Contact = () => {
                       />
                     </div>
 
-                    <Button type="submit" size="lg" className="w-full md:w-auto">
+                    <Button
+                      type="submit"
+                      size="lg"
+                      className="w-full md:w-auto"
+                    >
                       Gửi tin nhắn
                     </Button>
                   </form>
@@ -174,9 +182,11 @@ const Contact = () => {
 
         {/* Map */}
         <section className="py-12 bg-muted">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-center">Vị trí cửa hàng</h2>
-            <div className="aspect-video max-w-5xl mx-auto rounded-lg overflow-hidden shadow-lg">
+          <h2 className="text-3xl font-bold mb-8 text-center">
+            Vị trí cửa hàng
+          </h2>
+          <div className="w-full">
+            <div className="aspect-video w-full max-w-full mx-auto rounded-lg overflow-hidden shadow-lg">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1264891957537!2d106.62502631531352!3d10.804766161690887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752813b0fe6d6b%3A0x8c02a9e8e7b8c2f0!2zVMOibiBIxrDGoW5nLCBUw6JuIFF1w70sIFTDom4gUGjDuiwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1642425676543!5m2!1svi!2s"
                 width="100%"
