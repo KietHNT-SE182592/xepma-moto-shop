@@ -188,7 +188,7 @@ const Index = () => {
         className="relative to-white mt-3 py-8 sm:py-10"
         style={{
           background:
-            "linear-gradient(to bottom, black 0%, black 70%, #403434 85%)",
+            "linear-gradient(to bottom, black 0%, black 65%, #403434 85%, #817777ff 100%)",
         }}
       >
         {/* Black angled corner right - hidden on mobile */}
@@ -233,9 +233,9 @@ const Index = () => {
                   </h2>
                 </div>
 
-                <div className="flex items-stretch">
-                  <div className="w-2 sm:w-3 bg-black skew-x-[-34deg]" />
-                  <div className="w-2 sm:w-3 bg-black skew-x-[-34deg] ml-2 sm:ml-1" />
+                <div className="flex items-stretch gap-1 sm:gap-2">
+                  <div className="w-2  bg-black skew-x-[-34deg]" />
+                  <div className="w-2  bg-black skew-x-[-34deg] ml-2 sm:ml-1" />
                 </div>
               </div>
 
