@@ -223,32 +223,31 @@ const Index = () => {
 
       {/* Categories */}
       <section className="py-12 sm:py-16">
-        <div className="container mx-auto px-4  sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8 sm:mb-12 text-left">
-            {/* Title */}
-            <div className="relative w-fit block">
-              {/* Background yellow - responsive */}
-              <div className="absolute inset-0 bg-black py-3 clip-subtitle px-6 py-2 top-0 right-[-60px] sm:right-[-90px] w-[calc(100%+60px)] sm:w-[calc(100%+90px)]" />
+            <div className="flex flex-col ">
+              <div className="flex items-stretch w-fit">
+                <div className="bg-black clip-subtitle px-6 py-2 flex items-center">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mr-2 sm:mr-3">
+                    Danh Mục Sản Phẩm
+                  </h2>
+                </div>
 
-              {/* Slanted stripes - hidden on mobile */}
-              <div className="hidden sm:flex absolute h-full  right-[-136px] gap-4">
-                <div className="w-4 h-full bg-black skew-x-[-34deg] clip-subtitle" />
-                <div className="w-4 h-full bg-black skew-x-[-34deg] clip-subtitle" />
+                <div className="flex items-stretch">
+                  <div className="w-2 sm:w-3 bg-black skew-x-[-34deg]" />
+                  <div className="w-2 sm:w-3 bg-black skew-x-[-34deg] ml-2 sm:ml-1" />
+                </div>
               </div>
 
-              <h2 className="relative text-2xl sm:text-3xl md:text-4xl font-bold text-white px-3 sm:px-4 py-2 z-10">
-                Danh Mục Sản Phẩm
-              </h2>
-            </div>
-
-            {/* Subtitle */}
-            <div className="relative inline-block overflow-hidden">
-              <p className="relative text-white text-xs sm:text-sm md:text-base px-4 sm:px-5 py-1 pr-8 sm:pr-12 z-10 bg-[#403434] clip-subtitle">
-                Phụ tùng chính hãng cho mọi hãng xe
-              </p>
+              <div className="bg-[#403434] clip-subtitle w-fit px-4 sm:px-5 py-1 ">
+                <p className="text-white text-xs sm:text-sm md:text-base mr-1 sm:mr-2">
+                  Phụ tùng chính hãng cho mọi hãng xe
+                </p>
+              </div>
             </div>
           </div>
 
+          {/* --- Grid danh mục --- */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {categories.map((category, index) => (
               <CategoryCard key={index} {...category} />
