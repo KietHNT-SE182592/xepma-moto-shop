@@ -191,11 +191,11 @@ const Index = () => {
             "linear-gradient(to bottom, black 0%, black 65%, #403434 85%, #817777ff 100%)",
         }}
       >
-        {/* Black angled corner right - hidden on mobile */}
-        <div className="hidden lg:block absolute top-1/2 right-0 -translate-y-1/2 h-[120%] w-40 bg-[#d92026] clip-path-right" />
+        {/* Black angled corner right - responsive sizing */}
+        <div className="block absolute top-1/2 right-0 -translate-y-1/2 h-[100%] sm:h-[120%] w-20 sm:w-40 bg-[#d92026] clip-path-right" />
 
-        {/* Bottom angle stripe - hidden on mobile */}
-        <div className="hidden lg:block absolute bottom-0 left-0 w-[55%] h-6 bg-[#d92026] clip-path-bottom" />
+        {/* Bottom angle stripe - responsive sizing */}
+        <div className="block absolute bottom-0 left-0 w-[40%] sm:w-[55%] h-4 sm:h-6 bg-[#d92026] clip-path-bottom" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">

@@ -94,7 +94,15 @@ const Header = () => {
                   )}
                 </Button>
               </PopoverTrigger>
-              <PopoverContent className="w-72 sm:w-80" align="end" side="bottom" sideOffset={8} alignOffset={-10}>
+              <PopoverContent 
+                className="w-72 sm:w-80 cart-popover" 
+                align="end" 
+                side="bottom" 
+                sideOffset={8} 
+                alignOffset={0}
+                avoidCollisions={false}
+                collisionPadding={0}
+              >
                 <div className="space-y-4">
                   <h3 className="font-semibold text-sm sm:text-base">Giỏ hàng của bạn</h3>
                   {items.length === 0 ? (

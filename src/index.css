@@ -88,6 +88,16 @@ All colors MUST be HSL.
   }
 }
 
+/* Custom styles for cart popover positioning */
+@layer components {
+  /* Ensure cart popover is always positioned to the right */
+  .cart-popover {
+    right: 0 !important;
+    left: auto !important;
+    transform-origin: top right !important;
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
