@@ -1,4 +1,11 @@
-import { MapPin, Phone, Mail, Facebook, Instagram, Youtube } from "lucide-react";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Facebook,
+  Instagram,
+  Youtube,
+} from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
@@ -23,27 +30,42 @@ const Footer = () => {
           {/* Company info */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center space-x-2 mb-3 sm:mb-4">
-              <img src={logo} alt="XE PHÁO MÃ" className="h-8 sm:h-10 md:h-12 w-auto" />
+              <img
+                src={logo}
+                alt="XE PHÁO MÃ"
+                className="h-8 sm:h-10 md:h-12 w-auto"
+              />
               <h3 className="text-base sm:text-lg font-bold">XE PHÁO MÃ</h3>
             </div>
             <p className="text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed">
-              CÔNG TY TNHH XE PHÁO MÃ chuyên cung cấp phụ tùng xe máy chính hãng, 
-              giá sỉ và lẻ toàn quốc. Cam kết uy tín, chất lượng và giao hàng nhanh chóng.
+              CÔNG TY TNHH XE PHÁO MÃ chuyên cung cấp phụ tùng xe máy chính
+              hãng, giá sỉ và lẻ toàn quốc. Cam kết uy tín, chất lượng và giao
+              hàng nhanh chóng.
             </p>
-            <p className="text-xs sm:text-sm font-semibold">Mã số thuế: 0319004288</p>
+            <p className="text-xs sm:text-sm font-semibold">
+              Mã số thuế: 0319004288
+            </p>
           </div>
 
           {/* Contact info */}
           <div>
-            <h3 className="text-base sm:text-lg font-bold mb-3 sm:mb-4">Liên hệ</h3>
+            <h3 className="text-base sm:text-lg font-bold mb-3 sm:mb-4">
+              Liên hệ
+            </h3>
             <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
               <div className="flex items-start space-x-2">
                 <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-primary shrink-0 mt-0.5" />
-                <span className="leading-relaxed">179/58/10 Lê Đình Thám, phường Tân Sơn Nhì, quận Tân Phú, TP. Hồ Chí Minh</span>
+                <span className="leading-relaxed">
+                  179/58/10 Lê Đình Thám, phường Tân Sơn Nhì, quận Tân Phú, TP.
+                  Hồ Chí Minh
+                </span>
               </div>
               <div className="flex items-start space-x-2">
                 <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-primary shrink-0 mt-0.5" />
-                <a href="mailto:lengochoaithanh130597@gmail.com" className="hover:text-primary transition-colors break-all">
+                <a
+                  href="mailto:lengochoaithanh130597@gmail.com"
+                  className="hover:text-primary transition-colors break-all"
+                >
                   lengochoaithanh130597@gmail.com
                 </a>
               </div>
@@ -52,20 +74,61 @@ const Footer = () => {
 
           {/* Quick links */}
           <div>
-            <h3 className="text-base sm:text-lg font-bold mb-3 sm:mb-4">Danh mục</h3>
+            <h3 className="text-base sm:text-lg font-bold mb-3 sm:mb-4">
+              Danh mục
+            </h3>
             <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
-              <li><a href="/products?category=honda" className="hover:text-primary transition-colors">Phụ tùng Honda</a></li>
-              <li><a href="/products?category=yamaha" className="hover:text-primary transition-colors">Phụ tùng Yamaha</a></li>
-              <li><a href="/products?category=suzuki" className="hover:text-primary transition-colors">Phụ tùng Suzuki</a></li>
-              <li><a href="/products?category=sym" className="hover:text-primary transition-colors">Phụ tùng SYM</a></li>
-              <li><a href="/news" className="hover:text-primary transition-colors">Tin tức</a></li>
+              <li>
+                <a
+                  href="/products?category=honda"
+                  className="hover:text-primary transition-colors"
+                >
+                  Phụ tùng Honda
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/products?category=yamaha"
+                  className="hover:text-primary transition-colors"
+                >
+                  Phụ tùng Yamaha
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/products?category=suzuki"
+                  className="hover:text-primary transition-colors"
+                >
+                  Phụ tùng Suzuki
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/products?category=sym"
+                  className="hover:text-primary transition-colors"
+                >
+                  Phụ tùng SYM
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/news"
+                  className="hover:text-primary transition-colors"
+                >
+                  Tin tức
+                </a>
+              </li>
             </ul>
           </div>
 
           {/* Newsletter */}
           <div>
-            <h3 className="text-base sm:text-lg font-bold mb-3 sm:mb-4">Đăng ký nhận tin</h3>
-            <p className="text-xs sm:text-sm mb-3 sm:mb-4">Nhận thông tin khuyến mãi và sản phẩm mới nhất</p>
+            <h3 className="text-base sm:text-lg font-bold mb-3 sm:mb-4">
+              Đăng ký nhận tin
+            </h3>
+            <p className="text-xs sm:text-sm mb-3 sm:mb-4">
+              Nhận thông tin khuyến mãi và sản phẩm mới nhất
+            </p>
             <form onSubmit={handleSubscribe} className="space-y-2">
               <Input
                 type="email"
@@ -73,7 +136,7 @@ const Footer = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="bg-background/10 border-background/20 text-foreground placeholder:text-muted-foreground text-sm"
+                className="text-white placeholder:text-gray-400 border-background/20 text-foreground placeholder:text-muted-foreground text-sm"
               />
               <Button type="submit" className="w-full text-sm">
                 Đăng ký

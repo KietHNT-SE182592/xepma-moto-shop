@@ -152,8 +152,7 @@ const Index = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl text-secondary-foreground">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 leading-tight">
-                Phụ Tùng Xe Máy{" "}
-                <span className="text-[#d92026]">Chính Hãng</span>
+                Phụ Tùng Xe Máy <span className="text-primary">Chính Hãng</span>
               </h1>
               <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8">
                 Cam kết uy tín, chất lượng và giao hàng nhanh chóng toàn quốc
@@ -162,7 +161,7 @@ const Index = () => {
                 <Link to="/products">
                   <Button
                     size="lg"
-                    className="w-full sm:w-auto text-base sm:text-lg bg-[#d92026]"
+                    className="w-full sm:w-auto text-base sm:text-lg bg-primary"
                   >
                     Xem sản phẩm
                     <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
@@ -192,10 +191,10 @@ const Index = () => {
         }}
       >
         {/* Black angled corner right - responsive sizing */}
-        <div className="block absolute top-1/2 right-0 -translate-y-1/2 h-[100%] sm:h-[120%] w-20 sm:w-40 bg-[#d92026] clip-path-right" />
+        <div className="block absolute top-1/2 right-0 -translate-y-1/2 h-[100%] sm:h-[120%] w-20 sm:w-40 bg-primary clip-path-right" />
 
         {/* Bottom angle stripe - responsive sizing */}
-        <div className="block absolute bottom-0 left-0 w-[40%] sm:w-[55%] h-4 sm:h-6 bg-[#d92026] clip-path-bottom" />
+        <div className="block absolute bottom-0 left-0 w-[40%] sm:w-[55%] h-4 sm:h-6 bg-primary clip-path-bottom" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">

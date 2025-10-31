@@ -17,44 +17,41 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
 
-    /* Màu vàng gold sáng và tươi */
-    --primary: 45 85% 58%;
-    --primary-foreground: 0 0% 10%;
+    /* Primary - Đỏ #d92026 */
+    --primary: 358 72% 48%;
+    --primary-foreground: 0 0% 98%;
 
-    /* Màu xám đậm cho secondary */
-    --secondary: 0 0% 38%;
+    /* Secondary - Đen */
+    --secondary: 0 0% 0%;
     --secondary-foreground: 0 0% 98%;
 
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
-    /* Accent màu vàng gold sáng */
-    --accent: 45 90% 65%;
-    --accent-foreground: 0 0% 10%;
+    --accent: 358 72% 55%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 45 85% 58%;
+    --ring: 358 72% 48%;
 
     --radius: 0.5rem;
 
-    /* Gradients - Bright Gold gradient */
+    /* Gradients */
     --gradient-hero: linear-gradient(135deg, #d4af37 0%, #f4e4a6 100%);
-    --gradient-card: linear-gradient(
-      180deg,
-      hsl(0 0% 38%) 0%,
-      hsl(0 0% 35%) 100%
-    );
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
+
     --gradient-gold: linear-gradient(135deg, #d4af37 0%, #f4e4a6 100%);
 
     /* Shadows */
     --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.1),
       0 2px 4px -1px hsl(0 0% 0% / 0.06);
-    --shadow-hover: 0 10px 15px -3px hsl(45 85% 58% / 0.3),
-      0 4px 6px -2px hsl(45 85% 58% / 0.2);
+    --shadow-hover: 0 10px 15px -3px hsl(358 72% 48% / 0.3),
+      0 4px 6px -2px hsl(358 72% 48% / 0.2);
   }
 
   .dark {
@@ -67,10 +64,12 @@ All colors MUST be HSL.
     --popover: 0 0% 15%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 45 85% 58%;
-    --primary-foreground: 0 0% 10%;
+    /* Primary - Đỏ */
+    --primary: 358 72% 48%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 38%;
+    /* Secondary - Đen */
+    --secondary: 0 0% 0%;
     --secondary-foreground: 0 0% 98%;
 
     --muted: 0 0% 20%;
@@ -84,7 +83,7 @@ All colors MUST be HSL.
 
     --border: 0 0% 25%;
     --input: 0 0% 20%;
-    --ring: 45 85% 58%;
+    --ring: 358 72% 48%;
   }
 }
 
@@ -106,6 +105,7 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+
   .clip-path-right {
     clip-path: polygon(70% 0, 100% 0, 100% 100%, 0 100%);
   }

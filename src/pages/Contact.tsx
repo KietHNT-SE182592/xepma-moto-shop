@@ -41,7 +41,9 @@ const Contact = () => {
         {/* Page Header */}
         <section className="py-6 sm:py-8 md:py-12 bg-gradient-to-r from-primary to-accent text-primary-foreground">
           <div className="container mx-auto px-4">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">Liên Hệ</h1>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">
+              Liên Hệ
+            </h1>
             <p className="text-sm sm:text-base md:text-lg opacity-90">
               Chúng tôi luôn sẵn sàng hỗ trợ bạn
             </p>
@@ -107,10 +109,15 @@ const Contact = () => {
               {/* Contact Form */}
               <Card className="lg:col-span-2 lg:order-2">
                 <CardHeader>
-                  <CardTitle className="text-lg sm:text-xl">Gửi tin nhắn cho chúng tôi</CardTitle>
+                  <CardTitle className="text-lg sm:text-xl">
+                    Gửi tin nhắn cho chúng tôi
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                  <form
+                    onSubmit={handleSubmit}
+                    className="space-y-4 sm:space-y-6"
+                  >
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
                         <label className="text-xs sm:text-sm font-medium mb-2 block">
@@ -122,7 +129,7 @@ const Contact = () => {
                           onChange={handleChange}
                           placeholder="Nguyễn Văn A"
                           required
-                          className="text-sm"
+                          className="border-background/20 text-foreground placeholder:text-muted-foreground text-sm"
                         />
                       </div>
                       <div>
@@ -136,7 +143,7 @@ const Contact = () => {
                           onChange={handleChange}
                           placeholder="email@example.com"
                           required
-                          className="text-sm"
+                          className="border-background/20 text-foreground placeholder:text-muted-foreground text-sm"
                         />
                       </div>
                     </div>
@@ -151,7 +158,7 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="0123456789"
-                        className="text-sm"
+                        className="border-background/20 text-foreground placeholder:text-muted-foreground text-sm"
                       />
                     </div>
 
@@ -166,7 +173,7 @@ const Contact = () => {
                         placeholder="Nhập nội dung cần tư vấn..."
                         rows={4}
                         required
-                        className="text-sm resize-none"
+                        className="border-background/20 text-foreground placeholder:text-muted-foreground text-sm resize-none"
                       />
                     </div>
 
