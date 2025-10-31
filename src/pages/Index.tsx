@@ -152,7 +152,8 @@ const Index = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl text-secondary-foreground">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 leading-tight">
-                Phụ Tùng Xe Máy <span className="text-primary">Chính Hãng</span>
+                Phụ Tùng Xe Máy{" "}
+                <span className="text-[#d92026]">Chính Hãng</span>
               </h1>
               <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8">
                 Cam kết uy tín, chất lượng và giao hàng nhanh chóng toàn quốc
@@ -161,7 +162,7 @@ const Index = () => {
                 <Link to="/products">
                   <Button
                     size="lg"
-                    className="w-full sm:w-auto text-base sm:text-lg"
+                    className="w-full sm:w-auto text-base sm:text-lg bg-[#d92026]"
                   >
                     Xem sản phẩm
                     <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
@@ -183,12 +184,18 @@ const Index = () => {
       </section>
 
       {/* Features */}
-      <section className="relative bg-primary mt-3 py-8 sm:py-10">
+      <section
+        className="relative to-white mt-3 py-8 sm:py-10"
+        style={{
+          background:
+            "linear-gradient(to bottom, black 0%, black 70%, #403434 85%)",
+        }}
+      >
         {/* Black angled corner right - hidden on mobile */}
-        <div className="hidden lg:block absolute top-1/2 right-0 -translate-y-1/2 h-[120%] w-40 bg-black clip-path-right" />
+        <div className="hidden lg:block absolute top-1/2 right-0 -translate-y-1/2 h-[120%] w-40 bg-[#d92026] clip-path-right" />
 
         {/* Bottom angle stripe - hidden on mobile */}
-        <div className="hidden lg:block absolute bottom-0 left-0 w-[55%] h-6 bg-black clip-path-bottom" />
+        <div className="hidden lg:block absolute bottom-0 left-0 w-[55%] h-6 bg-[#d92026] clip-path-bottom" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
@@ -236,7 +243,7 @@ const Index = () => {
 
             {/* Subtitle */}
             <div className="relative inline-block overflow-hidden">
-              <p className="relative text-white text-xs sm:text-sm md:text-base px-4 sm:px-5 py-1 pr-8 sm:pr-12 z-10 bg-[#474747] clip-subtitle">
+              <p className="relative text-white text-xs sm:text-sm md:text-base px-4 sm:px-5 py-1 pr-8 sm:pr-12 z-10 bg-[#403434] clip-subtitle">
                 Phụ tùng chính hãng cho mọi hãng xe
               </p>
             </div>
