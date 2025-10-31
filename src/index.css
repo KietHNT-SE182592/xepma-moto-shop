@@ -101,7 +101,7 @@ All colors MUST be HSL.
   }
 
   .clip-path-bottom {
-    clip-path: polygon(0 0, 100% 0, 96% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 94% 100%, 0% 100%);
   }
 
   .clip-subtitle {

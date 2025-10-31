@@ -159,7 +159,10 @@ const Index = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link to="/products">
-                  <Button size="lg" className="w-full sm:w-auto text-base sm:text-lg">
+                  <Button
+                    size="lg"
+                    className="w-full sm:w-auto text-base sm:text-lg"
+                  >
                     Xem sản phẩm
                     <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                   </Button>
@@ -213,27 +216,27 @@ const Index = () => {
 
       {/* Categories */}
       <section className="py-12 sm:py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4  sm:px-6 lg:px-8">
           <div className="mb-8 sm:mb-12 text-left">
             {/* Title */}
             <div className="relative w-fit block">
               {/* Background yellow - responsive */}
-              <div className="absolute inset-0 bg-primary clip-subtitle h-8 sm:h-10 top-1 sm:top-2 right-[-60px] sm:right-[-90px] w-[calc(100%+60px)] sm:w-[calc(100%+90px)]" />
+              <div className="absolute inset-0 bg-black py-3 clip-subtitle px-6 py-2 top-0 right-[-60px] sm:right-[-90px] w-[calc(100%+60px)] sm:w-[calc(100%+90px)]" />
 
               {/* Slanted stripes - hidden on mobile */}
-              <div className="hidden sm:flex absolute top-2 right-[-126px] gap-3">
-                <div className="w-3 h-10 bg-primary skew-x-[-30deg] clip-subtitle" />
-                <div className="w-3 h-10 bg-primary skew-x-[-30deg] clip-subtitle" />
+              <div className="hidden sm:flex absolute h-full  right-[-136px] gap-4">
+                <div className="w-4 h-full bg-black skew-x-[-34deg] clip-subtitle" />
+                <div className="w-4 h-full bg-black skew-x-[-34deg] clip-subtitle" />
               </div>
 
-              <h2 className="relative text-2xl sm:text-3xl md:text-4xl font-bold text-black px-3 sm:px-4 py-1 z-10">
+              <h2 className="relative text-2xl sm:text-3xl md:text-4xl font-bold text-white px-3 sm:px-4 py-2 z-10">
                 Danh Mục Sản Phẩm
               </h2>
             </div>
 
             {/* Subtitle */}
-            <div className="relative w-fit block mt-2">
-              <p className="relative text-white text-xs sm:text-sm md:text-base px-2 sm:px-3 pr-8 sm:pr-12 py-0.5 z-10 bg-black clip-subtitle">
+            <div className="relative inline-block overflow-hidden">
+              <p className="relative text-white text-xs sm:text-sm md:text-base px-4 sm:px-5 py-1 pr-8 sm:pr-12 z-10 bg-[#474747] clip-subtitle">
                 Phụ tùng chính hãng cho mọi hãng xe
               </p>
             </div>
@@ -284,7 +287,11 @@ const Index = () => {
             Đội ngũ chuyên gia của chúng tôi sẵn sàng hỗ trợ bạn 24/7
           </p>
           <Link to="/contact">
-            <Button size="lg" variant="secondary" className="text-base sm:text-lg">
+            <Button
+              size="lg"
+              variant="secondary"
+              className="text-base sm:text-lg"
+            >
               Liên hệ ngay
               <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Button>
