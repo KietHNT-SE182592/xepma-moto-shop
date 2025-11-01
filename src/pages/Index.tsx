@@ -258,21 +258,35 @@ const Index = () => {
       {/* Featured Products */}
       <section className="py-12 sm:py-16 bg-muted">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 sm:mb-12 gap-4">
-            <div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">
-                Sản Phẩm Nổi Bật
-              </h2>
-              <p className="text-muted-foreground text-base sm:text-lg">
-                Được khách hàng tin dùng nhất
-              </p>
+          <div className="mb-8 sm:mb-12 text-left">
+            <div className="flex flex-col ">
+              <div className="flex items-stretch w-fit">
+                <div className="bg-black clip-subtitle px-6 py-2 flex items-center">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mr-2 sm:mr-3">
+                    Sản Phẩm Nổi Bật
+                  </h2>
+                </div>
+
+                <div className="flex items-stretch gap-1 sm:gap-2">
+                  <div className="w-2  bg-black skew-x-[-34deg]" />
+                  <div className="w-2  bg-black skew-x-[-34deg] ml-2 sm:ml-1" />
+                </div>
+              </div>
+
+              <div className="bg-[#403434] clip-subtitle w-fit px-4 sm:px-5 py-1 ">
+                <p className="text-white text-xs sm:text-sm md:text-base mr-1 sm:mr-2">
+                  Được khách hàng tin dùng nhất
+                </p>
+              </div>
             </div>
-            <Link to="/products">
-              <Button variant="outline" className="w-full sm:w-auto">
-                Xem tất cả
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
+            <div className="flex justify-end mt-4">
+              <Link to="/products">
+                <Button variant="outline" className="w-full sm:w-auto">
+                  Xem tất cả
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {featuredProducts.map((product, index) => (
